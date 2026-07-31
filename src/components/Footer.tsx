@@ -89,7 +89,9 @@ export function Footer() {
               <li className="flex items-center gap-2.5">
                 <Phone size={16} className="text-primary/70 shrink-0" />
                 <a
-                  href={`tel:${profile.phone.replace(/[^0-9+]/g, '')}`}
+                  href="https://wa.me/918778169902"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:text-white hover:underline transition duration-300"
                 >
                   {profile.phone}

@@ -1,18 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { User, Calendar, MapPin, Mail, Phone, Heart } from "lucide-react";
+import { User, Calendar, MapPin, Mail, Phone, Heart, Eye } from "lucide-react";
 import { portfolioData } from "@/lib/portfolio-data";
 
 export function AboutSection() {
   const { profile, about, education } = portfolioData;
 
   const infoItems = [
-    { icon: User, label: "Title", value: profile.title },
     { icon: Calendar, label: "Born", value: "January 16, 2006" },
     { icon: MapPin, label: "Location", value: profile.location },
     { icon: Mail, label: "Email", value: profile.email, href: `mailto:${profile.email}` },
-    { icon: Phone, label: "WhatsApp", value: profile.phone, href: `tel:${profile.phone.replace(/[^0-9+]/g, '')}` },
+    { 
+      icon: Phone, 
+      label: "WhatsApp", 
+      value: profile.phone, 
+      href: "https://wa.me/918778169902",
+      target: "_blank",
+      rel: "noopener noreferrer"
+    },
   ];
 
   return (
@@ -24,7 +30,7 @@ export function AboutSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <motion.h2 
+          <motion.h2
             className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-gray-950 dark:text-zinc-50"
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -33,7 +39,7 @@ export function AboutSection() {
           >
             About <span className="text-primary">Me</span>
           </motion.h2>
-          <motion.div 
+          <motion.div
             className="w-16 h-1.5 bg-primary mx-auto rounded-full mt-4"
             initial={{ width: 0 }}
             whileInView={{ width: 64 }}
@@ -44,7 +50,7 @@ export function AboutSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Brand Visualizer / Profile Accent Card */}
-          <motion.div 
+          <motion.div
             className="lg:col-span-4 flex flex-col items-center"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -73,7 +79,7 @@ export function AboutSection() {
           </motion.div>
 
           {/* Details Content */}
-          <motion.div 
+          <motion.div
             className="lg:col-span-8 space-y-8"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -118,8 +124,10 @@ export function AboutSection() {
                         {item.label}
                       </span>
                       {item.href ? (
-                        <a 
+                        <a
                           href={item.href}
+                          target={item.target}
+                          rel={item.rel}
                           className="text-sm font-bold text-gray-800 dark:text-zinc-200 hover:text-primary dark:hover:text-primary transition duration-300"
                         >
                           {item.value}
@@ -155,12 +163,14 @@ export function AboutSection() {
 
             {/* Direct Resume CTA */}
             <div className="pt-2">
-              <a 
+              <a
                 href="/resume.pdf"
-                download="Dinesh_Kumar_Resume.pdf"
-                className="inline-flex items-center justify-center bg-primary hover:bg-primary/95 text-white font-bold px-7 py-3.5 rounded-xl shadow-md shadow-primary/10 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 shrink-0 text-sm active:scale-95"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/95 text-white font-bold px-7 py-3.5 rounded-xl shadow-md shadow-primary/10 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 shrink-0 text-sm active:scale-95"
               >
-                Download Resume PDF
+                <Eye size={15} />
+                View Resume
               </a>
             </div>
           </motion.div>

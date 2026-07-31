@@ -22,7 +22,9 @@ export function ContactSection() {
       title: "WhatsApp message",
       value: profile.phone,
       description: "Active response within 24 hours",
-      href: `tel:${profile.phone.replace(/[^0-9+]/g, '')}`,
+      href: "https://wa.me/918778169902",
+      target: "_blank",
+      rel: "noopener noreferrer",
     },
     {
       icon: MapPin,
@@ -93,8 +95,8 @@ export function ContactSection() {
                   <a
                     key={i}
                     href={opt.href}
-                    target={opt.icon === MapPin ? "_blank" : "_self"}
-                    rel={opt.icon === MapPin ? "noopener noreferrer" : ""}
+                    target={opt.target || (opt.icon === MapPin ? "_blank" : "_self")}
+                    rel={opt.rel || (opt.icon === MapPin ? "noopener noreferrer" : "")}
                     className="flex gap-4 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-850 hover:border-primary/20 dark:hover:border-primary/20 shadow-sm hover:shadow-md transition duration-300"
                   >
                     <div className="p-3 bg-primary/10 dark:bg-primary/20 text-primary rounded-xl shrink-0 h-fit self-center">

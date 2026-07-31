@@ -3,7 +3,7 @@ import { PortfolioData } from "@/types";
 export const portfolioData: PortfolioData = {
   profile: {
     name: "Dinesh Kumar S",
-    title: "Aspiring Full-Stack Developer | Python & Java Enthusiast",
+    title: "Software Developer | Java-Rooted, SQL-Backed, Django-Built",
     email: "dineshkumarselvaraj31@gmail.com",
     phone: "+91-87781-69902",
     location: "Tirunelveli, Tamil Nadu, India",
@@ -28,9 +28,10 @@ export const portfolioData: PortfolioData = {
     quote: "Code is my tool, projects are my canvas, and innovation is my goal.",
     interests: ["Music", "Travel", "Movie", "Sports"],
     highlights: [
-      "Writing clean, performance-optimized code",
+      "Always learning, always building",
       "Designing practical solutions that scale",
-      "Learning fast and adapting to new challenges"
+      "Learning fast and adapting to new challenges",
+      "Delivering quality over complexity "
     ]
   },
 
@@ -53,6 +54,15 @@ export const portfolioData: PortfolioData = {
 
   certifications: [
     {
+      "id": "cert-8",
+      "name": "Infosys Internship",
+      "issuer": "Infosys Springboard",
+      "date": "Feb 2025 - March 2025",
+      "achievement": "Internship",
+      "verified": true,
+      "link": "/certificates/Infosys Internship Certificate.pdf#toolbar=0"
+    },
+    {
       "id": "cert-1",
       "name": "Programming in Java",
       "issuer": "NPTEL (IIT Kharagpur)",
@@ -71,11 +81,20 @@ export const portfolioData: PortfolioData = {
       "link": "/certificates/Python HackerRank.png"
     },
     {
+      "id": "cert-7",
+      "name": "AWS Cloud Practitioner Essentials",
+      "issuer": "AWS Skill Builder",
+      "date": "July 2026",
+      "achievement": "Certified",
+      "verified": true,
+      "link": "/certificates/AWS Cloud Practitioner Essentials.pdf#toolbar=0"
+    },
+    {
       "id": "cert-3",
       "name": "Python Foundation Certification",
       "issuer": "Infosys Springboard",
       "date": "August 2024",
-      "achievement": "Completed",
+      "achievement": "Certified",
       "verified": true,
       "link": "/certificates/Python Foundation Certification.pdf#toolbar=0"
     },
@@ -84,7 +103,7 @@ export const portfolioData: PortfolioData = {
       "name": "Programming using Java",
       "issuer": "Infosys Springboard",
       "date": "July 2025",
-      "achievement": "Completed",
+      "achievement": "Certified",
       "verified": true,
       "link": "/certificates/Java infosys.pdf#toolbar=0"
     },
@@ -93,7 +112,7 @@ export const portfolioData: PortfolioData = {
       "name": "Python Programming",
       "issuer": "Reliance Foundation Skilling Academy (Skill India)",
       "date": "July 2025",
-      "achievement": "Completed",
+      "achievement": "Certified",
       "verified": true,
       "link": "/certificates/python skill india relince.pdf#toolbar=0"
     },

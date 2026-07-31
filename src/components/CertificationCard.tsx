@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Award, CheckCircle2, ExternalLink } from "lucide-react";
+import { Award, CheckCircle2, ExternalLink, Code } from "lucide-react";
 import { Certification } from "@/types";
 
 interface CertificationCardProps {
@@ -25,7 +25,11 @@ export function CertificationCard({ cert, index }: CertificationCardProps) {
         {/* Header Indicator */}
         <div className="flex justify-between items-start gap-4 mb-4">
           <div className="p-2.5 rounded-xl bg-primary/10 dark:bg-primary/20 text-primary transition duration-300 group-hover:scale-110">
-            <Award size={20} className="stroke-[2.25]" />
+            {cert.id === "cert-8" ? (
+              <Code size={20} className="stroke-[2.25]" />
+            ) : (
+              <Award size={20} className="stroke-[2.25]" />
+            )}
           </div>
           {verified && (
             <div className="flex items-center gap-1 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-450 bg-emerald-50 dark:bg-emerald-950/20 px-2 py-0.5 rounded-full border border-emerald-250/20 dark:border-emerald-800/10">

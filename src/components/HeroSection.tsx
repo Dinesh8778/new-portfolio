@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Download, Mail, Terminal } from "lucide-react";
+import { ArrowRight, Eye, Mail, Terminal } from "lucide-react";
 import { portfolioData } from "@/lib/portfolio-data";
 
 export function HeroSection() {
@@ -37,10 +37,10 @@ export function HeroSection() {
       {/* Aesthetic geometric grids & lighting blobs */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl -z-10 animate-pulse[duration:8s]" />
       <div className="absolute top-15 right-10 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl -z-10" />
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
+
           {/* Main Title Description column */}
           <motion.div
             className="lg:col-span-7 space-y-6 text-left"
@@ -49,8 +49,8 @@ export function HeroSection() {
             animate="visible"
           >
             {/* Soft indicator badge */}
-            <motion.div 
-              variants={itemVariants} 
+            <motion.div
+              variants={itemVariants}
               className="inline-flex items-center gap-2 py-1.5 px-3.5 rounded-full bg-primary/10 dark:bg-primary/20 text-primary border border-primary/20 text-xs font-bold uppercase tracking-wider w-fit"
             >
               <Terminal size={12} className="stroke-[2.5]" />
@@ -65,7 +65,7 @@ export function HeroSection() {
               >
                 Welcome to my interactive workspace
               </motion.p>
-              
+
               <motion.h1
                 variants={itemVariants}
                 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-gray-950 dark:text-zinc-50 leading-[1.08]"
@@ -101,14 +101,15 @@ export function HeroSection() {
                 Hire Me
                 <ArrowRight size={15} className="group-hover:translate-x-0.5 transition duration-300" />
               </a>
-              
+
               <a
                 href="/resume.pdf"
-                download="Dinesh_Kumar_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-white dark:bg-slate-900 hover:bg-gray-50 dark:hover:bg-slate-800 text-gray-800 dark:text-zinc-200 font-bold px-7 py-3.5 rounded-xl border border-gray-200 dark:border-slate-800 shadow-sm transition duration-305 text-sm select-none active:scale-[0.98]"
               >
-                <Download size={15} />
-                Download CV
+                <Eye size={15} />
+                View Resume
               </a>
             </motion.div>
           </motion.div>
@@ -140,13 +141,13 @@ export function HeroSection() {
                   name: <span className="text-emerald-400">"{profile.name}"</span>,
                 </p>
                 <p className="pl-4">
-                  role: <span className="text-emerald-400">"Full-Stack Engineer"</span>,
+                  role: <span className="text-emerald-400">"Full-Stack Engineer & Software Application Developer"</span>,
                 </p>
                 <p className="pl-4 text-pretty">
-                  skills: <span className="text-amber-300">["Python", "Django", "Java", "Next.js"]</span>,
+                  skills: <span className="text-amber-300">["Java", "Python", "C#", ,"JS", "Django"]</span>,
                 </p>
                 <p className="pl-4">
-                  interests: <span className="text-amber-300">["Scale", "AI", "UX"]</span>,
+                  interests: <span className="text-amber-300">["Scale", "AI", "ML"]</span>,
                 </p>
                 <p className="pl-4">
                   readyForWork: <span className="text-rose-400">true</span>
