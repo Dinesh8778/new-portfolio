@@ -50,9 +50,18 @@ export function ProjectsSection() {
 
   // Extract all unique technologies from static projects for filters
   const allTechnologies = useMemo(() => {
+    const allowed = new Set([
+      "AI", "CSS", "Django", "HTML", "JavaScript", "Machine Learning",
+      "PostgreSQL", "Python", "React", "SQLite", "TTS", "Tkinter",
+      "MongoDB", "Express", "Node.js", "JWT"
+    ]);
     const list = new Set<string>();
     projects.forEach((proj) => {
-      proj.technologies.forEach((tech) => list.add(tech));
+      proj.technologies.forEach((tech) => {
+        if (allowed.has(tech)) {
+          list.add(tech);
+        }
+      });
     });
     return ["All", ...Array.from(list).sort()];
   }, [projects]);

@@ -177,6 +177,24 @@ export const portfolioData: PortfolioData = {
       "status": "completed" as const
     },
     {
+      "id": "finintel-ai",
+      "name": "FinIntel AI - Autonomous Expense Tracker",
+      "description": "A full-stack MERN financial management workspace with autonomous budget modeling, graphical dashboards, EMI amortization sliders, and an AI reasoning workspace for smarter money decisions.",
+      "technologies": ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "JWT"],
+      "github": "https://github.com/Dinesh8778/expense-tracker-AI",
+      "liveDemo": "https://expense-tracker-ai-black.vercel.app/",
+      "features": [
+        "Dashboard Overview - Graphical card-based dashboard summarizing income, expenses, and budgets",
+        "EMI Amortization Sliders - Interactive sliders to model loan repayments and interest breakdowns",
+        "AI Reasoning Workspace - Dedicated AI space for financial insights and reasoning over spending data",
+        "Secure Auth - JWT-based authentication with httpOnly cookie sessions",
+        "Health Check Engine - Live backend connectivity dashboard, with safe fallback if optional AI keys are missing",
+        "Data Visualization - Recharts-powered graphs for income, expense, and budget trends"
+      ],
+      "featured": true,
+      "status": "completed" as const
+    },
+    {
       "id": "proj-2",
       "name": "AcademiQ - AI Student Management System",
       "description": "A web-based platform that digitizes and automates academic operations for educational institutions, combining traditional student management with three cooperating AI subsystems — predictive analytics, a role-scoped conversational assistant, and automated anomaly detection.",
